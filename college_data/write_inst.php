@@ -18,17 +18,11 @@
                                 if($rowcount ==0){
                                         $rowcount++;
                                         continue; //prevents column headers from being written to database
-//                                } elseif ($rowcount==10){
-//                                        break;
                                 } else {
                                         $rows[] = $data;
                                 }
 
         $row = $rows[0];
-//        print_r($rows);
-//        echo '<br>' . '<br>';
-//        print_r($row);
-//        echo '<br>' . '<br>';
         unset ($rows);
 
                 //create the associative array with key names to match table names
@@ -39,8 +33,8 @@
                 $array['Latitude'] = $row[64];
                 $array['Longitude'] = $row[65];
 
-        print_r($array);
-        echo '<br>' . '<br>';
+//        print_r($array);
+//        echo '<br>' . '<br>';
 
                 $STH =$DBH->prepare("INSERT INTO institutions (ID, Name, City, State, Latitude, Longitude) VALUES (:ID, :Name, :City, :State, :Latitude, :Longitude)");
 

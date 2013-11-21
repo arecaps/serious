@@ -14,8 +14,8 @@ echo $e->getMessage();
 //$DBH->query('DROP DATABASE IF EXISTS project');
 $DBH->query('CREATE DATABASE project');
 
-//$DBH->query('DROP TABLE IF EXISTS enrollment');
-$DBH->query('CREATE TABLE project.enrollment11 (ID INT( 6 ) NOT NULL , Enrollment INT( 6 ) NOT NULL)');
+$DBH->query('DROP TABLE IF EXISTS project.enrollment11');
+$DBH->query('CREATE TABLE project.enrollment11 (ID INT( 6 ) NOT NULL PRIMARY KEY, Enrollment INT( 6 ) NOT NULL)');
 
 $DBH = null;
 ?>
