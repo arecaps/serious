@@ -1,13 +1,16 @@
-<!DOCTYPEhtml>
 <?php
 include_once('pdo_connect.php');
 
-    $STH =$DBH->prepare("SELECT enrollment.ID, Name, Enrollment FROM enrollment 
-			INNER JOIN institutions ON enrollment.ID = institutions.ID 
-			ORDER BY Enrollment DESC LIMIT 10;");
-	$STH->setFetchMode(PDO::FETCH_ASSOC);
-	$STH->execute();
-		$data = $STH->fetchall();		
-  
-               include_once ('table.php');
-?>
+    $sql = ($_POST[query]);
+//    print_r($sql);
+
+
+        $STH =$DBH->prepare($sql);
+            $STH->setFetchMode(PDO::FETCH_ASSOC);
+            
+//                print_r($STH);
+            
+            $STH->execute();
+                    $data = $STH->fetchall();
+
+                   include_once ('table.php');
