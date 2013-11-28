@@ -1,0 +1,45 @@
+h1 {
+    text-align: center;
+    font-size: 180%;
+    color: sandybrown;
+    font-family: fantasy;
+    transform:scale(2,1);
+    -webkit-transform:scale(2,1);
+}
+.home {
+    text-align: center;
+    font-size: 150%;
+    
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    padding: 10px 15px 0px 5px;
+}
+input {
+    background-color:transparent;
+    border: 0 none; 
+    font-size: 130%; 
+    margin-bottom: 12px;}
+
+.myButton:hover {
+    background-color:lightyellow; 
+    text-decoration:underline;
+}
+div.centered 
+{
+    text-align: center;
+}
+div.centered table 
+{
+    margin: 0 auto; 
+    text-align: left;
+}
