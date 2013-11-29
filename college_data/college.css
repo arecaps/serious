@@ -21,6 +21,12 @@ a:hover {
 table {
     border-collapse: collapse;
 }
+tr:nth-child(even) {
+    background: #CCC
+}
+th{
+    background: #CCC
+}
 td {
     padding: 10px 15px 0px 5px;
 }
@@ -30,7 +36,7 @@ input {
     font-size: 130%; 
     margin-bottom: 12px;}
 
-.myButton:hover {
+input:hover {
     background-color:lightyellow; 
     text-decoration:underline;
 }

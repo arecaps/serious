@@ -8,7 +8,7 @@ include_once('pdo_connect.php');
         $STH =$DBH->prepare($sql);
             $STH->setFetchMode(PDO::FETCH_ASSOC);
             
-//                print_r($STH);
+//              print_r($STH);
             
             $STH->execute();
                     $data = $STH->fetchall();
