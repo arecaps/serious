@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>College Data Comparisons</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="college.css">
+    </head>
+        <body>
+            <h1>Your #1 Source for College Data!</h1>
+            <aside> 
+                <form  action="state.php" method="POST">
+                Enter the two letters for a state to get a list of all the colleges in that state: <input name="state" type="text" size="5" placeholder="Here">
+		</form>
+            </aside>
+                <div class = home><h2>Click on one of the links below to see these comparison results.</h2>
+                 <form action="main.php" method="POST">
+			<input type="submit" value="Which colleges had the largest percentage increase in liabilities between 2010 and 2011?">
+			<input name="query" type="hidden" value="SELECT Name,financial10.Liabilities AS Liabilities_2010, financial11.Liabilities AS Liabilities_2011, financial11.Liabilities/financial10.Liabilities * 100 AS Percent FROM financial11 INNER JOIN institutions ON institutions.ID = financial11.ID 
+                               INNER JOIN financial10 ON institutions.ID = financial10.ID ORDER BY financial11.Liabilities/financial10.Liabilities DESC LIMIT 10;">
+		</form>
+                <form action="main.php" method="POST">
+			<input type="submit" value="Which colleges had the largest percentage increase in enrollment between  2010 and 2011?">
+			<input name="query" type="hidden" value="SELECT Name, enrollment10.Enrollment AS Enrollment_2010, enrollment11.Enrollment AS Enrollment_2011, enrollment11.Enrollment/enrollment10.Enrollment * 100 AS Percent FROM enrollment11 
+                               INNER JOIN institutions ON institutions.ID = enrollment11.ID INNER JOIN enrollment10 ON institutions.ID = enrollment10.ID ORDER BY enrollment11.Enrollment/enrollment10.Enrollment  DESC LIMIT 10;">
+                </form></div>
+	</body>
+</html>
