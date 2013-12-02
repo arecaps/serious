@@ -8,19 +8,12 @@ h1 {
 }
 .home {
     text-align: center;
-    font-size: 150%;
+    font-size: 145%;
     
-}
-a {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-    color: red;
 }
 table {
     border-collapse: collapse;
-    font-size: 180%;
+    font-size: 170%;
 }
 tr:nth-child(even) {
     background: whitesmoke;
@@ -38,7 +31,8 @@ input {
     background-color:transparent;
     border: 0 none; 
     font-size: 130%; 
-    margin-bottom: 12px;}
+    margin-bottom: 12px;
+}
 
 input:hover {
     background-color:lightyellow; 
@@ -53,3 +47,20 @@ div.centered table
     margin: 0 auto; 
     text-align: left;
 }
+.state {
+    font-size: 180%;
+}
+aside {
+    font-family: Garamound;
+    font-size: 170%;
+    width: 10%;
+    float: left;
+    margin-right: 10px;
+    border: black 1px;
+	}
+div {
+    width: 88%;
+    float: right;
+    border-left: 1px solid;
+    padding-left: 10px;
+	}
