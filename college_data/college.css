@@ -20,15 +20,19 @@ a:hover {
 }
 table {
     border-collapse: collapse;
+    font-size: 180%;
 }
 tr:nth-child(even) {
-    background: #CCC
+    background: whitesmoke;
 }
 th{
-    background: #CCC
+    background: #E9E5E5
 }
 td {
     padding: 10px 15px 0px 5px;
+}
+tr:hover {
+    background: aliceblue;
 }
 input {
     background-color:transparent;
