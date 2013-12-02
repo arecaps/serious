@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head><title></title>
+    <head><title>College Data Results</title>
         <link rel="stylesheet" type="text/css" href="college.css">
     </head>
     <body>

@@ -2,7 +2,6 @@
 include_once('pdo_connect.php');
 
     $sql = ($_POST[query]);
-//    print_r($sql);
 
 
         $STH =$DBH->prepare($sql);
