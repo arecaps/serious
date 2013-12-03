@@ -27,14 +27,14 @@ td {
 tr:hover {
     background: aliceblue;
 }
-input {
+.link {
     background-color:transparent;
     border: 0 none; 
     font-size: 130%; 
     margin-bottom: 12px;
 }
 
-input:hover {
+.link:hover {
     background-color:lightyellow; 
     text-decoration:underline;
 }
@@ -64,3 +64,7 @@ div {
     border-left: 1px solid;
     padding-left: 10px;
 	}
+.side {
+      font-size: 80%;
+      
+        }

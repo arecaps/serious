@@ -9,42 +9,45 @@
             <h1>Your #1 Source for College Data!</h1>
             <aside> 
                 <form  action="state.php" method="POST">
-                    Enter the two letters for a state to get a list of all the colleges in that state: <input name="state" type="text" size="5" placeholder="Here">
+                    Enter the two letters for a state to get a list of all the colleges in that state: <input class = "side" name="state" type="text" size="3" placeholder="Here">
+		</form>
+                <form  action="more.php" method="POST">
+                    Enter the name of any college to get more information about that school: <input class = "side" name="school" type="text" size="12" placeholder="School">
 		</form>
             </aside>
             <div class = home><h2>Click on one of the links below to get the answer to some commonly asked questions about colleges</h2>
 		<form action="main.php" method="POST">
-			<input type="submit" value="Which colleges have the highest enrollment?">
+			<input class = "link" type="submit" value="Which colleges have the highest enrollment?">
 			<input name="query" type="hidden" value="SELECT Name, Enrollment FROM enrollment11 
                                INNER JOIN institutions ON enrollment11.ID = institutions.ID ORDER BY Enrollment DESC LIMIT 10;">
 		</form>
 		<form action="main.php" method="POST">
-			<input type="submit" value="Which colleges have the largest amount of total liabilities?">
+			<input class = "link" type="submit" value="Which colleges have the largest amount of total liabilities?">
 			<input name="query" type="hidden" value="SELECT Name, Liabilities FROM project.institutions 
                                INNER JOIN financial11 ON institutions.ID = financial11.ID ORDER BY Liabilities DESC LIMIT 10;">
 		</form>
 		<form action="main.php" method="POST">
-			<input type="submit" value="Which colleges have the largest amount of net assets?">
+			<input class = "link" type="submit" value="Which colleges have the largest amount of net assets?">
 			<input name="query" type="hidden" value="SELECT Name, Assets FROM project.institutions 
                                INNER JOIN financial11 ON institutions.ID = financial11.ID ORDER BY Assets DESC LIMIT 10;">
 		</form>
 		<form action="main.php" method="POST">
-			<input type="submit" value="Which colleges have the largest amount of total revenues?">
+			<input class = "link" type="submit" value="Which colleges have the largest amount of total revenues?">
 			<input name="query" type="hidden" value="SELECT Name, Revenue FROM project.institutions 
                                INNER JOIN financial11 ON institutions.ID = financial11.ID ORDER BY Revenue DESC LIMIT 10;">
 		</form>
 		<form action="main.php" method="POST">
-			<input type="submit" value="Which colleges have the largest amount of total revenues per student?">
+			<input class = "link" type="submit" value="Which colleges have the largest amount of total revenues per student?">
 			<input name="query" type="hidden" value="SELECT Name, Revenue, Enrollment, Revenue/Enrollment AS Revenue_per_student FROM financial11 INNER JOIN enrollment11 ON financial11.ID = enrollment11.ID 
                                INNER JOIN institutions ON institutions.ID = financial11.ID ORDER BY Revenue/Enrollment DESC LIMIT 10;">
 		</form>
                 <form action="main.php" method="POST">
-			<input type="submit" value="Which colleges have the largest amount of net assets per student?">
+			<input class = "link" type="submit" value="Which colleges have the largest amount of net assets per student?">
 			<input name="query" type="hidden" value="SELECT Name, Assets, Enrollment, Assets/Enrollment AS Assets_per_student FROM financial11 INNER JOIN enrollment11 ON financial11.ID = enrollment11.ID 
                                INNER JOIN institutions ON institutions.ID = financial11.ID ORDER BY Assets/Enrollment DESC LIMIT 10;">
 		</form>
                 <form action="main.php" method="POST">
-			<input type="submit" value="Which colleges have the largest amount of total liabilities per student?">
+			<input class = "link" type="submit" value="Which colleges have the largest amount of total liabilities per student?">
 			<input name="query" type="hidden" value="SELECT Name, Liabilities, Enrollment, Liabilities/Enrollment AS Liabilities_per_student FROM financial11 INNER JOIN enrollment11 ON financial11.ID = enrollment11.ID 
                                INNER JOIN institutions ON institutions.ID = financial11.ID ORDER BY Liabilities/Enrollment DESC LIMIT 10;">
                 </form>
