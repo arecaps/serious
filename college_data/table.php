@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head><title>College Data Results</title>
-        <link rel="stylesheet" type="text/css" href="college.css">
+        <link rel="stylesheet" type="text/css" href="college2.css">
     </head>
     <body>
         <h1>Your #1 Source for College Data!</h1>
