@@ -1,0 +1,107 @@
+h1    {
+    text-align: center;
+    font-size: 400%;
+	color: sandybrown;
+    font-family: fantasy;
+	margin-bottom: 1px;
+	}
+
+h2	{
+	font-size: 144%;
+	text-align:center;
+	margin-bottom:45px;
+	}
+
+#owl{
+	text-align:center;
+	padding:0;
+	}
+
+.home {
+    text-align: left;
+    font-size: 145%;
+    }
+
+ul	{
+	color:sandybrown;
+	}
+
+	
+	.no{
+	border:none;
+	color:none;
+	background-color:transparent;
+	font-size:18px;
+	}
+	
+
+	input:hover{
+	color:sandybrown;
+	cursor:pointer;
+}
+	table {
+    border-collapse: collapse;
+    font-size: 170%;
+	}
+
+	tr:nth-child(even) {
+    background: whitesmoke;
+}
+th{
+    background: #E9E5E5
+}
+td {
+    padding: 10px 15px 0px 5px;
+}
+tr:hover {
+    background: aliceblue;
+}
+.link {
+    background-color:transparent;
+    border: 0 none;
+    font-size: 130%;
+    margin-bottom: 12px;
+}
+
+.link:hover {
+    background-color:lightyellow;
+    text-decoration:underline;
+}
+div.centered
+{
+    text-align: center;
+}
+div.centered table
+{
+    margin: 0 auto;
+    text-align: left;
+}
+.state {
+    font-size: 180%;
+}
+aside {
+    font-family: Garamound;
+    font-size: 170%;
+    width: 10%;
+    float: left;
+    margin-right: 10px;
+    border: black 1px;
+        }
+div {
+    width: 88%;
+    float: right;
+    padding-left: 10px;
+        }
+.foo {
+    color: black;  
+    font-size: 80%;
+      
+        }
+form {
+	margin-bottom:14px;
+	}
+.foo:hover{
+	color:sandybrown;
+	cursor:pointer;
+}
+
