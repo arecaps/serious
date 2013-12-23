@@ -22,7 +22,7 @@ public class GradeBook {
                 while(choice.equalsIgnoreCase("y")){
                 System.out.print("Enter a grade for the student: ");
 
-                students.get(0).addGrade(sc.nextInt());
+                students.get(i).addGrade(sc.nextInt());
                 System.out.print("Would you like to add another grade? (y/n): ");
                 choice = sc.next();
                     if(!choice.equalsIgnoreCase("y") & !choice.equalsIgnoreCase("n")){
