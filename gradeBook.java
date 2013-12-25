@@ -38,9 +38,9 @@ public class GradeBook {
                             more = sc.next();
                         }
             }
-            for(int j=0; j< students.size(); j++){
-                System.out.println(students.get(j).getName() + ": " + students.get(j).getAverage());
-            }
+           // for(int j=0; j< students.size(); j++){
+             //   System.out.println(students.get(j).getName() + ": " + students.get(j).getAverage());
+           // }
      
      String choice2 = "y";
      while(choice2.equalsIgnoreCase("y")){       
@@ -55,6 +55,8 @@ public class GradeBook {
                         System.out.print("Please enter either \"y\" or \"n\": ");
                         choice2 = sc.next();
                     }
+            } else {
+                System.out.println("Student not found, please try again");
             }
         }
     }
