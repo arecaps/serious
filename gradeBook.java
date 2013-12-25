@@ -49,16 +49,21 @@ public class GradeBook {
         for (Student s : students) {
             if (s.getName().equals(find)){
                 System.out.println(s.getName() + ": " + s.getAverage());
-                System.out.print("Would you like to get the average for another student? (y/n): ");
-                choice2 = sc.next();
-                    if(!choice2.equalsIgnoreCase("y") & !choice2.equalsIgnoreCase("n")){
-                        System.out.print("Please enter either \"y\" or \"n\": ");
-                        choice2 = sc.next();
-                    }
+                choice2 = confirmContinue(sc, "Would you like to get the average for another student? (y/n): ");
             } else {
                 System.out.println("Student not found, please try again");
             }
         }
     }
+    }
+    public static String confirmContinue(Scanner sc, String prompt){
+        String choice2;
+        System.out.print(prompt);
+                choice2 = sc.next();
+                    while(!choice2.equalsIgnoreCase("y") & !choice2.equalsIgnoreCase("n")){
+                        System.out.print("Please enter either \"y\" or \"n\": ");
+                        choice2 = sc.next();
+                    }
+                    return choice2;
     }
 }
