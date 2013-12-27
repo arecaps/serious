@@ -3,6 +3,13 @@ package bankaccount;
 import java.util.*;
 
 public class BankAccount {
+
+	public void createAccounts(Scanner sc){
+	    for(int i = 0; i < sc.nextInt(); i++){
+		accounts.add(new savingsAccount());
+		accounts.add(new checkingAccount());
+	    }
+	}
     
     public static void main(String[] args) {
         int balance =0;
