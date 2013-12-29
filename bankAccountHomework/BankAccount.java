@@ -3,35 +3,36 @@ package bankaccount;
 import java.util.*;
 
 public class BankAccount {
+    
+    public static ArrayList<Account> accounts = new ArrayList<Account>();
 
-	public void createAccounts(Scanner sc){
-	    for(int i = 0; i < sc.nextInt(); i++){
-		accounts.add(new savingsAccount());
-		accounts.add(new checkingAccount());
-	    }
-	}
+    public static void endMonth(){
+        System.out.println("\nAfter the end of the month...\n");
+        for(Account account : accounts){
+            account.endOfMonth();
+        }
+    }
     
     public static void main(String[] args) {
         int balance =0;
         
-        ArrayList<Account> accounts = new ArrayList<Account>();
+
         accounts.add(new savingsAccount());
         accounts.add(new checkingAccount());
         accounts.add(new savingsAccount());
         accounts.add(new checkingAccount());
         
         for(Account account : accounts){
-            int amount = new Random().nextInt(650)+650;
+            int amount = new Random().nextInt(700)+700;
             account.addTransaction(amount);
         }
         for(Account account : accounts){
-            System.out.println(account.getBalance());
+            System.out.println(account.getAccountNum() + ", Balance: " + account.getBalance());
         }
+        endMonth();
+
         for(Account account : accounts){
-            account.endOfMonth();
-        }
-        for(Account account : accounts){
-            System.out.println(account.getBalance());
+            System.out.println(account.getAccountNum() + ", Balance: " + account.getBalance());
         }
     }
     
