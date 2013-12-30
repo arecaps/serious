@@ -17,8 +17,10 @@ public abstract class Account {
         acctNo = new Random().nextInt(100000000)+15287635;
         return acctNo;
     }
-    public String getAccountNum(){
+    public void setAccountNum(){
         acctNum = "" + addAccountNo();
+    }
+    public String getAccountNum(){
         return acctNum;
     }
     public abstract void endOfMonth();
