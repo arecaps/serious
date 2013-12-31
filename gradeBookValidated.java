@@ -16,7 +16,7 @@ public class GradeBook {
         while(more.equalsIgnoreCase("y")){
         
             System.out.print("Enter a student name:  ");
-            String name = sc.next();
+            String name = checkName(sc);
             students.add(new Student(name));
             
                 //Loop to get grades for each student
@@ -87,4 +87,17 @@ public class GradeBook {
                }
                     return grade;
         }
+	public static String checkName(Scanner sc) {
+	    String test;
+            while (true) {
+                test = sc.next();
+                if (test.matches("[a-zA-Z]+")) {
+                    break;
+                } else {
+                    System.out.print("Name must contain only letters.\nEnter a student name:  ");
+                }
+                sc.nextLine();
+            }
+            return test;
+       }
 }
