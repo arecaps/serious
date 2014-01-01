@@ -14,9 +14,9 @@ public class BankAccount {
     }
     
     public static void main(String[] args) {
-        int balance =0;
-        
 
+        BankAccount bankAccount = new BankAccount();
+	
         accounts.add(new savingsAccount());
         accounts.add(new checkingAccount());
         accounts.add(new savingsAccount());
@@ -27,14 +27,13 @@ public class BankAccount {
             account.addTransaction(amount);
         }
         for(Account account : accounts){
-            System.out.println(account.getAccountNum() + ", Balance: " + account.getBalance());
+            account.setAccountNum();
+            System.out.println(account.getAccountNum() + ",\tBalance: " + account.getBalance());
         }
-        endMonth();
+        bankAccount.endMonth();
 
-        for(Account account : accounts){
-            System.out.println(account.getAccountNum() + ", Balance: " + account.getBalance());
+        for (Account account : accounts) {
+            account.print();
         }
     }
-    
 }
-

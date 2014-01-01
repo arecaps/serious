@@ -1,4 +1,3 @@
-
 package bankaccount;
 
 public class savingsAccount extends Account{
@@ -7,12 +6,16 @@ public class savingsAccount extends Account{
     @Override
     public void endOfMonth(){
         double interest = balance * .05/12;
-            balance += interest;
+            addTransaction((int)interest);
     }
     @Override
     public String getAccountNum(){
         acctTypeNo = "Savings Acct no. " + super.getAccountNum();
         return acctTypeNo;
+    }
+    @Override
+    public void print() {
+        System.out.println("I am a savings account, my balance is $" + balance);
     }
 }  
 
