@@ -7,9 +7,6 @@ public abstract class Account implements Printable{
     protected long acctNo;
     protected String acctNum;
     
-    public void Account(){
-    }
-    
     public int getBalance(){
         return balance;
     }

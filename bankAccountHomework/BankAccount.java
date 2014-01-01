@@ -28,6 +28,7 @@ public class BankAccount {
         }
         for(Account account : accounts){
             account.setAccountNum();
+
             System.out.println(account.getAccountNum() + ",\tBalance: " + account.getBalance());
         }
         bankAccount.endMonth();
